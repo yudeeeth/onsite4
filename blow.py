@@ -36,7 +36,7 @@ class blowcript():
         message = self.round(left,right)
         right = message & self.thritytwoones
         left = (message>>32) & self.thritytwoones
-        print(self.round(left,right))
+        #print(self.round(left,right))
 
     def reverse(self):
         for i in range(9):
@@ -44,7 +44,6 @@ class blowcript():
             self.p[0]= self.p[-(i+1)]
             self.p[-(i+1)]=temp
 
-    
     def sbox(self,n,val):
         if n==3:
             return self.s3[val]
